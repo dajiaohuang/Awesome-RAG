@@ -27,7 +27,7 @@ You may also [Ask DeepWiki](https://deepwiki.com/Danielskry/Awesome-RAG) over th
 - [🎯 Advanced Approaches](#-advanced-approaches)
 - [🧰 Frameworks that Facilitate RAG](#-frameworks-that-facilitate-rag)
 - [🐍 Python Ecosystem for RAG](#-python-ecosystem-for-rag)
-- [🛠️ Techniques](#-techniques)
+- [🛠️ Techniques](#%EF%B8%8F-techniques)
 - [📊 Metrics & Evaluation](#-metrics--evaluation)
 - [💾 Databases](#-databases)
 - [🔌 Platform-Specific RAG Implementations](#-platform-specific-rag-implementations)
@@ -130,12 +130,12 @@ See the full guide: [Python Ecosystem for RAG](docs/python-ecosystem.md)
 ### Prompting
 
 - **Strategies**
-  - [Tagging and Labeling](https://python.langchain.com/v0.1/docs/use_cases/tagging/): Adding semantic tags or labels to retrieved data to enhance relevance.
+  - [Tagging and Labeling](https://github.com/langchain-ai/langchain/blob/5c07a96de1f594c6748ab81ae03c3e7fa88d2b71/docs/docs/use_cases/tagging.ipynb): Adding semantic tags or labels to retrieved data to enhance relevance.
   - [Chain of Thought (CoT)](https://www.promptingguide.ai/techniques/cot): Encouraging the model to think through problems step by step before providing an answer.
   - [Chain of Verification (CoVe)](https://sourajit16-02-93.medium.com/chain-of-verification-cove-understanding-implementation-e7338c7f4cb5): Prompting the model to verify each step of its reasoning for accuracy.
   - [Self-Consistency](https://www.promptingguide.ai/techniques/consistency): Generating multiple reasoning paths and selecting the most consistent answer.
   - [Zero-Shot Prompting](https://www.promptingguide.ai/techniques/zeroshot): Designing prompts that guide the model without any examples.
-  - [Few-Shot Prompting](https://python.langchain.com/docs/how_to/few_shot_examples/): Providing a few examples in the prompt to demonstrate the desired response format.
+  - [Few-Shot Prompting (LangChain 0.1 example)](https://github.com/langchain-ai/langchain/blob/5c07a96de1f594c6748ab81ae03c3e7fa88d2b71/docs/docs/modules/model_io/prompts/few_shot_examples.ipynb): Providing a few examples in the prompt to demonstrate the desired response format.
   - [Reason & Act (ReAct) prompting](https://www.promptingguide.ai/techniques/react): Combines reasoning (e.g. CoT) with acting (e.g. tool calling).
 - **Caching**
   - [Prompt Caching](https://medium.com/@1kg/prompt-cache-what-is-prompt-caching-a-comprehensive-guide-e6cbae48e6a3): Optimizes LLMs by storing and reusing precomputed attention states.
@@ -151,21 +151,21 @@ Chunking strategy is one of the most critical decisions in RAG system design, di
   - **Characteristics**: Divides text into consistent-sized segments (typically 256-512 tokens) with configurable overlap (10-20%)
   - **Pros**: Simple to implement, predictable chunk sizes, efficient processing
   - **Cons**: May split sentences/paragraphs, loses document structure, can fragment semantic units
-  - **Implementation**: [CharacterTextSplitter](https://python.langchain.com/v0.1/docs/modules/data_connection/document_transformers/character_text_splitter/) (LangChain), [SentenceSplitter](https://docs.llamaindex.ai/en/stable/api_reference/node_parsers/sentence_splitter/) (LlamaIndex)
+  - **Implementation**: [CharacterTextSplitter](https://github.com/langchain-ai/langchain/blob/5c07a96de1f594c6748ab81ae03c3e7fa88d2b71/docs/docs/modules/data_connection/document_transformers/character_text_splitter.ipynb) (LangChain), [SentenceSplitter](https://docs.llamaindex.ai/en/stable/api_reference/node_parsers/sentence_splitter/) (LlamaIndex)
 
 - **[Recursive Chunking](https://medium.com/@AbhiramiVS/chunking-methods-all-to-know-about-it-65c10aa7b24e)**
   - **Use Case**: Documents with hierarchical structure (markdown, HTML, code)
   - **Characteristics**: Recursively splits by separators (paragraphs → sentences → words) until desired chunk size
   - **Pros**: Preserves natural boundaries, respects document hierarchy, better semantic coherence
   - **Cons**: More complex, variable chunk sizes, requires careful separator configuration
-  - **Implementation**: [RecursiveCharacterTextSplitter](https://python.langchain.com/v0.1/docs/modules/data_connection/document_transformers/recursive_text_splitter/) (LangChain)
+  - **Implementation**: [RecursiveCharacterTextSplitter](https://github.com/langchain-ai/langchain/blob/5c07a96de1f594c6748ab81ae03c3e7fa88d2b71/docs/docs/modules/data_connection/document_transformers/recursive_text_splitter.ipynb) (LangChain)
 
 - **[Document-Based Chunking](https://medium.com/@david.richards.tech/document-chunking-for-rag-ai-applications-04363d48fbf7)**
   - **Use Case**: Structured documents with clear sections (markdown headers, PDF sections, database records)
   - **Characteristics**: Segments based on document metadata, formatting cues, or structural elements
   - **Pros**: Maintains document structure, preserves context, enables metadata-rich retrieval
   - **Cons**: Requires structured input, may create very large or very small chunks
-  - **Implementation**: [MarkdownHeaderTextSplitter](https://python.langchain.com/v0.1/docs/modules/data_connection/document_transformers/markdown_header_metadata/) (LangChain)
+  - **Implementation**: [MarkdownHeaderTextSplitter](https://github.com/langchain-ai/langchain/blob/5c07a96de1f594c6748ab81ae03c3e7fa88d2b71/docs/docs/modules/data_connection/document_transformers/markdown_header_metadata.ipynb) (LangChain)
   - **Multimodal**: Handle images and text with models like [OpenCLIP](https://github.com/mlfoundations/open_clip)
 
 - **[Semantic Chunking](https://www.youtube.com/watch?v=8OJC21T2SL4&t=1933s)**
