@@ -5,7 +5,7 @@ A curated resource map of tools, frameworks, techniques, and learning materials 
 
 Also [available as an Agent Plugin](https://github.com/Danielskry/Awesome-RAG-Agent-Plugin) for VS Code, GitHub Copilot CLI, and Claude Code. 
 
-You may also [Ask DeepWiki](https:/deepwiki.com/Danielskry/Awesome-RAG) over this repository.
+You may also [Ask DeepWiki](https://deepwiki.com/Danielskry/Awesome-RAG) over this repository.
 
 ## Overview
 
@@ -54,7 +54,7 @@ RAG addresses a fundamental limitation of LLMs: their static knowledge cutoff an
 #### Production & Best Practices
 
 - [Production RAG patterns and best practices](https://docs.llamaindex.ai/en/stable/optimizing/production_rag/): Production-ready RAG optimization strategies
-- [LangChain Production Guide](https://python.langchain.com/docs/production/): Deploying LangChain applications to production
+- [LangChain Production Guide](https://docs.langchain.com/oss/python/langchain/deploy): Deploying LangChain applications to production
 - [Python Async Best Practices](https://docs.python.org/3/library/asyncio-dev.html): Writing efficient async Python code for AI applications
 
 ## 🏗️ Architecture Patterns
@@ -231,7 +231,7 @@ Embeddings are the foundation of semantic search in RAG systems. The choice of e
     - LLM is used to generate a hypothetical response based on the query.
     - Converts this response into a vector embedding.
     - Compares the query vector with the hypothetical response vector.
-  - [Small to Big Retrieval](https://github.com/GoogleCloudPlatform/generative-ai/blob/main/gemini/use-cases/retrieval-augmented-generation/small_to_big_rag/small_to_big_rag.ipynb)
+  - [Small to Big Retrieval (archived example)](https://github.com/GoogleCloudPlatform/generative-ai/blob/8a720501392c0f8e5757ea2a926c8537f4429c47/gemini/use-cases/retrieval-augmented-generation/small_to_big_rag/small_to_big_rag.ipynb)
     - Improves retrieval by using smaller chunks for search and larger chunks for context.
     - Smaller child chunks refers to bigger parent chunks
   - [Contextual Retrieval](https://www.anthropic.com/engineering/contextual-retrieval)
@@ -389,10 +389,10 @@ Vector databases are critical components of RAG systems, providing efficient sto
 
 - [Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/vector-database): Globally distributed, multi-model database service with integrated vector search.
 - [Couchbase](https://www.couchbase.com/products/vector-search/): A distributed NoSQL cloud database.
-- [Lantern](https://lantern.dev/): A privacy-aware personal search engine.
+- [Lantern](https://lantern.dev/): An open-source PostgreSQL extension for storing vectors, generating embeddings, and vector search.
 - [LlamaIndex](https://docs.llamaindex.ai/en/stable/module_guides/storing/vector_stores/): Employs a straightforward in-memory vector store for rapid experimentation.
 - [Neo4j](https://neo4j.com/docs/cypher-manual/current/indexes/semantic-indexes/vector-indexes/): Graph database management system.
-- [Qdrant](https://github.com/neo4j/neo4j): An open-source vector database designed for similarity search.
+- [Qdrant](https://github.com/qdrant/qdrant): An open-source vector database designed for similarity search.
 - [Redis Stack](https://redis.io/docs/latest/develop/interact/search-and-query/): An in-memory data structure store used as a database, cache, and message broker.
 - [SurrealDB](https://github.com/surrealdb/surrealdb): A scalable multi-model database optimized for time-series data.
 - [Weaviate](https://github.com/weaviate/weaviate): A open-source cloud-native vector search engine.
